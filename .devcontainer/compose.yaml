@@ -1,0 +1,4 @@
+services:
+  psql:
+    entrypoint: []
+    command: ["sleep", "infinity"]

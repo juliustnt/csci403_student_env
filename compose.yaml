@@ -1,0 +1,17 @@
+services:
+  psql:
+    build:
+      context: .
+    environment:
+      PGHOST: ${PGHOST}
+      PGPORT: ${PGPORT:-5432}
+      PGDATABASE: ${PGDATABASE}
+      PGUSER: ${PGUSER}
+      PGSSLMODE: ${PGSSLMODE:-require}
+      EDITOR: ${EDITOR:-nano}
+      VISUAL: ${EDITOR:-nano}
+      PSQL_EDITOR: ${EDITOR:-nano}
+    volumes:
+      - .:/workspace
+    stdin_open: true
+    tty: true

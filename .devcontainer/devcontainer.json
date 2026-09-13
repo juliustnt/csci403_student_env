@@ -1,0 +1,14 @@
+{
+  "name": "CSCI 403 Student Environment",
+  "dockerComposeFile": ["../compose.yaml", "compose.yaml"],
+  "service": "psql",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
+  "overrideCommand": false,
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python"],
+      "settings": {"python.defaultInterpreterPath": "/usr/local/bin/python"}
+    }
+  }
+}
