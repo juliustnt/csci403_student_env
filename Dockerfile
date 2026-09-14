@@ -1,6 +1,6 @@
 FROM python:3-slim-trixie
 
-ENV EDITOR=nano VISUAL=nano PSQL_EDITOR=nano
+ENV EDITOR=nano VISUAL=nano PSQL_EDITOR=nano PSQL_PAGER=""
 
 RUN apt-get update \
     && apt-get install --yes --no-install-recommends postgresql-client ca-certificates nano vim-tiny \
