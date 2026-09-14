@@ -11,6 +11,7 @@ services:
       EDITOR: ${EDITOR:-nano}
       VISUAL: ${EDITOR:-nano}
       PSQL_EDITOR: ${EDITOR:-nano}
+      PAGER: cat
     volumes:
       - .:/workspace
     stdin_open: true
