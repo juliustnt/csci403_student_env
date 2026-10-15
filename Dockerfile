@@ -6,7 +6,7 @@ RUN apt-get update \
   && apt-get install --yes --no-install-recommends postgresql-client ca-certificates nano vim less \
   && rm -rf /var/lib/apt/lists/*
 
-RUN python -m pip install --no-cache-dir pg8000 dotenv
+RUN python -m pip install --no-cache-dir "psycopg[binary]" pgcli python-dotenv
 
 WORKDIR /workspace
 ENTRYPOINT ["psql"]
