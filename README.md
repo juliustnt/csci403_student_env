@@ -17,8 +17,12 @@ To try [pgcli](https://github.com/dbcli/pgcli) with the same connection
 settings, run:
 
 ```sh
-docker compose run --rm --entrypoint pgcli psql -W
+docker compose run --rm --entrypoint pgcli psql --pgclirc /workspace/pgcli.conf -W
 ```
+
+The pgcli configuration keeps a query open across Enter presses until it ends
+with a semicolon. Continued SQL lines align with the SQL after the prompt, even
+when the prompt length changes.
 
 Both clients prompt for your database password. The image also includes
 `psycopg` for Python scripts. Once pgcli connects, run `SELECT 1;` to check
